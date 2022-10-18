@@ -29,7 +29,7 @@ malaria_treatment = ['antimalaria drugs']
 
 user_symptoms = [input("Enter your symptoms? \n")]
 print(user_symptoms)
-if user_symptoms in allergies_symptoms:
+if set(user_symptoms).issubset(set(allergies_symptoms)):
     print("Likely to have allergic reactions")
-elif user_symptoms in cold_flu_symptoms:
+else:
     print("Likely to have cold or flu")

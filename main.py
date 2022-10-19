@@ -27,7 +27,7 @@ malaria_causes = ['mosquito bites', 'organ transplant', 'a transfusion']
 malaria_treatment = ['antimalaria drugs']
 
 
-user_symptoms = [input("Enter your symptoms? \n")]
+user_symptoms = input("Enter your symptoms? \n").split(",")
 print(user_symptoms)
 if set(user_symptoms).issubset(set(allergies_symptoms)):
     print("Likely to have allergic reactions")
